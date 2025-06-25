@@ -23,7 +23,7 @@
 ## 📁 프로젝트 구조
 
 ```bash
-├── webcrawling_data.csv       # 협동로봇 문제 관련 Q&A 데이터
+├── data.csv                   # 협동로봇 문제 관련 Q&A 데이터
 ├── rag_final.py               # RAG 파이프라인 관련 코드
 ├── ragchat_output.csv         # RAG 기반 챗봇 실행 결과 파일
 ├── evaluation/                # RAG 응답 평가 관련 코드
