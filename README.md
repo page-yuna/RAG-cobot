@@ -23,18 +23,13 @@
 ## 📁 프로젝트 구조
 
 ```bash
-├── data/                 # 크롤링된 협동로봇 Q&A, 기술 문서
-├── embedding/            # 문서 임베딩 처리 및 FAISS 저장
-├── rag_pipeline/         # RAG 파이프라인 관련 코드
-│   ├── embed_docs.py
-│   ├── rag_chain.py
-│   └── utils.py
-├── interface/
-│   └── gradio_ui.py      # Gradio 기반 챗봇 UI
-├── evaluation/
-│   ├── bleu_rouge_eval.py
-│   └── llm_judge_eval.py
-└── README.md             # 프로젝트 설명
+├── webcrawling_data.csv       # 협동로봇 문제 관련 Q&A 데이터
+├── rag_final.py               # RAG 파이프라인 관련 코드
+├── ragchat_output.csv         # RAG 기반 챗봇 실행 결과 파일
+├── evaluation/                # RAG 응답 평가 관련 코드
+│   ├── eval.py
+│   └── eval_visualization.py
+└── README.md                  # 프로젝트 설명
 ```
 
 ---
@@ -51,70 +46,16 @@
 
 ---
 
-## 📊 성능 평가
-
-* **BLEU / ROUGE 점수**: 기존 검색 기반 도구 대비 높은 일관성과 정보 충실도 확보
-* **LLM-as-a-Judge 평가**: GPT-4를 통해 비교 평가 시 챗봇 응답의 정확성과 구체성 측면에서 우수
-* **사용자 시나리오 테스트**: 실제 협동로봇 문제(예: 펜스 설치 기준, 비상 정지 버튼 작동 오류 등)에 대해 신속한 답변 생성 확인
-
----
-
-## 🚀 실행 방법
-
-### 1. 필요한 라이브러리 설치
-
-```bash
-pip install -r requirements.txt
-```
-
-### 2. 문서 임베딩 및 벡터 DB 구축
-
-```bash
-python embedding/embed_docs.py
-```
-
-### 3. RAG 파이프라인 실행
-
-```bash
-python rag_pipeline/rag_chain.py
-```
-
-### 4. Gradio UI 실행
-
-```bash
-python interface/gradio_ui.py
-```
-
----
 
 ## ✨ 예시 질문
 
-* "로봇 안전펜스 설치 기준이 뭐야?"
+* "Polyscope 5.12에서 외부 TCP 보정을 사용할 수 있어?"
 * "비상 정지 버튼이 작동하지 않을 때 어떻게 해야 돼?"
-* "로봇의 TCP 설정 방법 알려줘"
-
----
-
-## 🙌 기여자
-
-* 박유나 (팀장, RAG 파이프라인 및 LLM 튜닝)
-* 김보미 (데이터 수집 및 전처리)
-* 김동희 (크롤링 및 벡터화 처리)
-
----
-
-## 📄 라이선스
-
-본 프로젝트는 **교육 목적**으로 개발된 것으로, 상업적 이용은 금지됩니다.
+* "URCap 개발 시 C207A0 오류는 무엇을 의미하나요?"
 
 ---
 
 ## 📬 문의
 
-* Email: [yunapark@example.com](mailto:yunapark@example.com)
-* GitHub: [github.com/yunapark](https://github.com/yunapark)
-
-```
-
-필요한 경우 `requirements.txt`, 실행 명령어, 성능 평가 결과 시각화 등을 포함하여 확장할 수 있어요. 추가하고 싶은 항목이 있다면 말씀해 주세요!
-```
+* Email: [lxnx.llxnx@gmail.com](mailto:lxnx.llxnx@gmail.com)
+* GitHub: [github.com/page-yuna](https://github.com/page-yuna)
